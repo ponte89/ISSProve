@@ -9,11 +9,33 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
                     ]
@@ -22,10 +44,16 @@
         }
     },
     "installed_plugins": {
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "it.unibo.hello"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "it.unibo.hello"
         },
-        "cordova-plugin-device-motion": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "it.unibo.hello"
+        },
+        "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "it.unibo.hello"
         }
     },
