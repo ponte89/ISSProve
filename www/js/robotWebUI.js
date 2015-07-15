@@ -94,10 +94,10 @@ function stopWatch() {
 
 function onSuccess(acceleration) {
 
-	if(acceleration.Y > 2){
+	if(acceleration.y > 2){
 		msg = 'a';
 	}else{
-		if(acceleration.Y < 2){
+		if(acceleration.y < 2){
 			msg = 'd';
 		}	
 	}
