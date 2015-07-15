@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			 <link rel="stylesheet" type="text/css" href="css/index.css" />
-		
-			<title>Robot Console</title>
-			<script type="text/javascript" charset="utf-8">
-			// The watch id references the current `watchAcceleration`
+<html>
+  <head>
+    <title>accelerometer.watchAcceleration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // The watch id references the current `watchAcceleration`
     var watchID = null;
 
     // Wait for device API libraries to load
@@ -52,54 +61,11 @@
     function onError() {
         alert('onError!');
     }
-			</script>
-			
-		</head>
-		<body>
-		
-		<script type="text/javascript" src="js/index.js"></script>
-    	<script type="text/javascript" src="js/robotWebUI.js"></script>
-		
-		<div align="center" id="index">
-        	<p>Location:</p>
-        	<input id="location" type="text" placeholder="192.168.43.226:8080">
-        	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>-->
-        	<button id="btnloc" class="btn generic" onclick="startWatch();">Connect</button>
-        	<br/><br/><br/>
-        	<button class="flat" onmousedown="setLocation(this);" value="localhost:8080">localhost:8080</button><br/>
-        	<button class="flat" onmousedown="setLocation(this);" value="192.168.43.226:8080">192.168.43.226:8080</button><br/>
-        	<br/><br/><br/>
-        	<div id="accelerometer">Waiting for accelerometer...</div>
-    	</div>
-		
-		<div id="main">
-        	<div id="back">
-            	<button class="flat" onmousedown="show('index'); hide('main');"><--</button><br/>
-            	<hr>
-        	</div><br/>
-        	<div align="center" id="header">
-            	<button class="btn halt" onmousedown="sendWs('halt');">HALT</button><br/>
-            	<button class="btn photo" onmousedown="sendWs('photo')">Photo</button>
-        	</div>
-        	<br/><br/><br/><br/><br/>
-        	<div align="center">
-            	<button class="btn generic up" onmousedown="sendWs('w-')">Forward</button>
-        	</div>
-        	<div align="center">
-            	<button class="btn generic left" onmousedown="sendWs('a-')">Left</button>
-            	<button class="btn generic right" onmousedown="sendWs('d-')">Right</button>
-        	</div>
-        	<div align="center">
-            	<button class="btn generic down" onmousedown="sendWs('s-')">Backward</button>
-        	</div>
-        	<br/><br/>
-        	<div align="center" id="footer">
-            	<button class="btn generic" onmousedown="setSpeed(20);">></button>
-            	<button class="btn generic" onmousedown="setSpeed(50);">>></button>
-            	<button class="btn generic" onmousedown="setSpeed(100);">>>></button><br/><br/><br/>
-            	<input type="text" id="speed">
-        	</div>
-        	
-    	</div>
-	</body>
+
+    </script>
+  </head>
+  <body>
+  	<button id="btnloc" class="btn generic" onclick="startWatch();">Connect</button>
+    <div id="accelerometer">Waiting for accelerometer...</div>
+  </body>
 </html>
