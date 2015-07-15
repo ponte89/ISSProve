@@ -94,13 +94,15 @@ function stopWatch() {
 
 function onSuccess(acceleration) {
 	if(acceleration.z >= 4){
-		if(acceleration.y > 2){
+		if(acceleration.y >=-2 && acceleration.y <=2){
+			msg = 'w'
+		}else if(acceleration.y > 2){
 			msg = 'a';
 		}else if(acceleration.y < -2){
 			msg = 'd';
 		}
 	}else{
-		msg = "halt";
+		msg = 'halt';
 	}	
 	
     var element = document.getElementById('accelerometer');
