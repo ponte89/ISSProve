@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.it.unibo.DemoAcc"
+        id        = "com.it.unibo.RobotConsole"
         version   = "1.0.0">
 
-    <name>Demo Acc</name>
+    <name>Robot Console</name>
 
     <description>
-        Gestione funzione accelerometro
+        A Robot Console for ISS project
     </description>
 
     <author href="" email="">
