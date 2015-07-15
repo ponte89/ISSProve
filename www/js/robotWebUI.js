@@ -114,6 +114,6 @@ function prova(){
 
 function cont_plus() { 
 	cont++; 
-	element.innerHTML = count;
+	element.innerHTML = ''+count;
    	//alert( cont ); 
 }
