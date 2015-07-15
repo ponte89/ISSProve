@@ -233,7 +233,8 @@ button.stop:before {
 }
 
 #main {
-    display: none;
+    /*display: none;*/
+    display:block;
     margin-left: 5%;
 }
 

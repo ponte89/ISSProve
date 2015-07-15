@@ -89,7 +89,19 @@ function stopWatch() {
 
 // onSuccess: Get a snapshot of the current acceleration
 //
+
+
+
 function onSuccess(acceleration) {
+
+	if(acceleration.Y > 2){
+		msg = 'a';
+	}else{
+		if(acceleration.Y < 2){
+			msg = 'd';
+		}	
+	}
+	
     var element = document.getElementById('accelerometer');
     element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
                     	'Acceleration Y: ' + acceleration.y         + '<br />' +
@@ -105,6 +117,7 @@ function onError() {
 
 var c = 0;
 var element; 
+var msg ;
 
 // Usiamo il metodo 2
 function prova(){
@@ -113,7 +126,7 @@ function prova(){
 }
 
 function cont_plus() { 
-	c++; 
-	element.innerHTML = ''+c;
+	//c++; 
+	element.innerHTML = ''+msg;
    	//alert( cont ); 
 }
