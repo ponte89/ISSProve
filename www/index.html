@@ -14,7 +14,8 @@
     	<script type="text/javascript" src="js/robotWebUI.js"></script>
 		
 		<div align="center" id="index">
-        	<p>Location:</p>
+			<div id="div1">
+        	<p>Robot IP:</p>
         	<input id="location" type="text" placeholder="192.168.43.226:8080">
         	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>-->
         	<button id="btnloc" class="btn generic" onclick="startWatch();prova();">Connect</button>
@@ -24,34 +25,46 @@
         	<br/><br/>
         	<div id="accelerometer">Waiting for accelerometer...</div>
         	<div id="count">0</div>
+        	</div>
     	</div>
 		
 		<div id="main">
         	<div id="back">
-            	<button class="flat" onmousedown="show('index'); hide('main');"><--</button><br/>
+            	<button class="flat" onmousedown="show('index'); hide('main');stopWatch();"><--</button>
+            	<br/>
             	<hr>
-        	</div><br/>
+        	</div>
+        	<br/>
+        	
         	<div align="center" id="header">
             	<button class="btn halt" onmousedown="sendWs('halt');">HALT</button><br/>
-            	<button class="btn photo" onmousedown="sendWs('photo')">Photo</button>
         	</div>
+        	
         	<br/><br/><br/><br/><br/>
-        	<div align="center">
-            	<button class="btn generic up" onmousedown="sendWs('w-')">Forward</button>
-        	</div>
-        	<div align="center">
-            	<button class="btn generic left" onmousedown="sendWs('a-')">Left</button>
-            	<button class="btn generic right" onmousedown="sendWs('d-')">Right</button>
-        	</div>
-        	<div align="center">
-            	<button class="btn generic down" onmousedown="sendWs('s-')">Backward</button>
-        	</div>
-        	<br/><br/>
-        	<div align="center" id="footer">
-            	<button class="btn generic" onmousedown="setSpeed(20);">></button>
-            	<button class="btn generic" onmousedown="setSpeed(50);">>></button>
-            	<button class="btn generic" onmousedown="setSpeed(100);">>>></button><br/><br/><br/>
-            	<input type="text" id="speed">
+        	
+        	<div align="center" id="console">
+        		<div>
+        		<div align="center">
+	            	<button class="btn generic up" onmousedown="sendWs('w-')">Forward</button>
+    	    	</div>	
+        	
+        		<div align="center">
+            		<button class="btn generic left" onmousedown="sendWs('a-')">Left</button>
+            		<button class="btn generic right" onmousedown="sendWs('d-')">Right</button>
+        		</div>
+        		
+        		<div align="center">
+            		<button class="btn generic down" onmousedown="sendWs('s-')">Backward</button>
+        		</div>
+        	
+        		<br/><br/>
+        		<div align="center" id="footer">
+            		<button class="btn generic" onmousedown="setSpeed(20);">></button>
+            		<button class="btn generic" onmousedown="setSpeed(50);">>></button>
+            		<button class="btn generic" onmousedown="setSpeed(100);">>>></button><br/><br/><br/>
+            		<input type="text" id="speed">
+        		</div>
+        		</div>
         	</div>
     	</div>
 	</body>

@@ -95,13 +95,16 @@ function stopWatch() {
 function onSuccess(acceleration) {
 	if(acceleration.z >= 4){
 		if(acceleration.y >=-2 && acceleration.y <=2){
-			msg = 'w'
+			msg = 'w-High'
 		}else if(acceleration.y > 2){
-			msg = 'a';
+			msg = 'a-High';
 		}else if(acceleration.y < -2){
-			msg = 'd';
+			msg = 'd-High';
 		}
-	}else{
+	}else if(acceleration.z <=-4){
+		msg = 's-High';
+	}
+	else{
 		msg = 'halt';
 	}	
 	
@@ -132,4 +135,6 @@ function cont_plus() {
 	//c++; 
 	element.innerHTML = ''+msg;
    	//alert( cont ); 
+   	
+   	//sock.send(msg);
 }
