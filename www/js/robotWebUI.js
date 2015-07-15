@@ -71,47 +71,49 @@ function hide(who) {
 
 var watchID = null;
 
-    // Wait for device API libraries to load
-    //
-    //document.addEventListener("deviceready", onDeviceReady, false);
+function startWatch() {
 
-    // device APIs are available
-    //
-    //function onDeviceReady() {
-    //    startWatch();
-    //}
+    // Update acceleration every 1/2 seconds
+    var options = { frequency: 500 };
 
-    // Start watching the acceleration
-    //
-    function startWatch() {
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+}
 
-        // Update acceleration every 1/2 seconds
-        var options = { frequency: 500 };
-
-        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+// Stop watching the acceleration
+function stopWatch() {
+    if (watchID) {
+        navigator.accelerometer.clearWatch(watchID);
+        watchID = null;
     }
+}
 
-    // Stop watching the acceleration
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.accelerometer.clearWatch(watchID);
-            watchID = null;
-        }
-    }
+// onSuccess: Get a snapshot of the current acceleration
+//
+function onSuccess(acceleration) {
+    var element = document.getElementById('accelerometer');
+    element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+                    	'Acceleration Y: ' + acceleration.y         + '<br />' +
+                        'Acceleration Z: ' + acceleration.z         + '<br />' +
+                        'Timestamp: '      + acceleration.timestamp + '<br />';
+}
 
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        var element = document.getElementById('accelerometer');
-        element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
-                            'Acceleration Y: ' + acceleration.y         + '<br />' +
-                            'Acceleration Z: ' + acceleration.z         + '<br />' +
-                            'Timestamp: '      + acceleration.timestamp + '<br />';
-    }
+// onError: Failed to get the acceleration
+//
+function onError() {
+    alert('onError!');
+}
 
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
+var cont = 0;
+var element; 
+
+// Usiamo il metodo 2
+function prova(){
+	element = document.getElementById('count');
+	window.setInterval( 'cont_plus()', 1000 );
+}
+
+function cont_plus() { 
+	cont++; 
+	element.innerHTML = count;
+   	//alert( cont ); 
+}

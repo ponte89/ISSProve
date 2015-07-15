@@ -17,12 +17,13 @@
         	<p>Location:</p>
         	<input id="location" type="text" placeholder="192.168.43.226:8080">
         	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>-->
-        	<button id="btnloc" class="btn generic" onclick="startWatch();">Connect</button>
+        	<button id="btnloc" class="btn generic" onclick="startWatch();prova();">Connect</button>
         	<br/><br/><br/>
         	<button class="flat" onmousedown="setLocation(this);" value="localhost:8080">localhost:8080</button><br/>
         	<button class="flat" onmousedown="setLocation(this);" value="192.168.43.226:8080">192.168.43.226:8080</button><br/>
         	<br/><br/>
         	<div id="accelerometer">Waiting for accelerometer...</div>
+        	<div id="count">0</div>
     	</div>
 		
 		<div id="main">
