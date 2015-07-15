@@ -103,7 +103,7 @@ function onError() {
     alert('onError!');
 }
 
-var cont = 0;
+var c = 0;
 var element; 
 
 // Usiamo il metodo 2
@@ -113,7 +113,7 @@ function prova(){
 }
 
 function cont_plus() { 
-	cont++; 
-	element.innerHTML = ''+count;
+	c++; 
+	element.innerHTML = ''+c;
    	//alert( cont ); 
 }
