@@ -3,7 +3,7 @@ var speedRobot = "Low";
 var sock;
 var msg ;
 
-var stop = false;
+var stop ;
 
 function setLocation(el) {
     document.getElementById("location").value = el.value;
@@ -99,7 +99,7 @@ function onSuccess(acceleration) {
 
 var tog = document.getElementById('myonoffswitch');
 
-//if(!tog.checked){
+if(!tog.checked){
 	if(acceleration.z >= 4){
 		if(acceleration.y >=-2 && acceleration.y <=2){
 			msg = "w-High";
@@ -114,7 +114,7 @@ var tog = document.getElementById('myonoffswitch');
 	else{
 		msg = 'halt';
 	}
-//}	
+}	
 	
     var element = document.getElementById('accelerometer');
     element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
@@ -135,15 +135,6 @@ var element;
 
 // Usiamo il metodo 2
 function prova(){
-	/*var tog = document.getElementById('myonoffswitch');
-	
-	if(!tog.checked){
-		alert('not');
-	}else{
-		alert('yes');
-	}
-	
-	element = document.getElementById('count');*/
 	window.setInterval( 'cont_plus()', 1000 );
 }
 
@@ -158,4 +149,8 @@ function cont_plus() {
 
 function stopsendcommand(){
 	stop = true;
+}
+
+function startsendcommand(){
+	stop = false;
 }

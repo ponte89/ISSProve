@@ -19,7 +19,7 @@
         	<input id="location" type="text" placeholder="192.168.43.226:8080">
         	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>
         	<button id="btnloc" class="btn generic" onclick="startWatch();prova();">Connect</button>-->
-        	<button id="btnloc" class="btn generic" onclick="setWs();startWatch();prova();">Connect</button>
+        	<button id="btnloc" class="btn generic" onclick="setWs();startWatch();prova();startsendcommand();">Connect</button>
         	<br/><br/><br/> 
         	<button class="flat" onmousedown="setLocation(this);" value="localhost:8080">localhost:8080</button><br/>
         	<button class="flat" onmousedown="setLocation(this);" value="192.168.43.226:8080">192.168.43.226:8080</button><br/>
@@ -31,7 +31,7 @@
 		
 		<div id="main">
         	<div id="back">
-            	<button class="flat" onmousedown="show('index'); hide('main');stopWatch();"><--</button>
+            	<button class="flat" onmousedown="show('index'); hide('main');stopWatch();stopsendcommand();"><--</button>
             	<br/>
             	<hr>
         	</div>
