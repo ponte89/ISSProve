@@ -98,7 +98,7 @@ function onSuccess(acceleration) {
 
 var tog = document.getElementById('myonoffswitch');
 
-if(!tog.checked){
+//if(!tog.checked){
 	if(acceleration.z >= 4){
 		if(acceleration.y >=-2 && acceleration.y <=2){
 			msg = 'w-High'
@@ -113,7 +113,7 @@ if(!tog.checked){
 	else{
 		msg = 'halt';
 	}
-}	
+//}	
 	
     var element = document.getElementById('accelerometer');
     element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
