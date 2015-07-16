@@ -17,8 +17,9 @@
 			<div id="div1">
         	<p>Robot IP:</p>
         	<input id="location" type="text" placeholder="192.168.43.226:8080">
-        	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>-->
-        	<button id="btnloc" class="btn generic" onclick="startWatch();prova();">Connect</button>
+        	<!--<button id="btnloc" class="btn generic" onclick="setWs();">Connect</button>
+        	<button id="btnloc" class="btn generic" onclick="startWatch();prova();">Connect</button>-->
+        	<button id="btnloc" class="btn generic" onclick="prova();">Connect</button>
         	<br/><br/><br/>
         	<button class="flat" onmousedown="setLocation(this);" value="localhost:8080">localhost:8080</button><br/>
         	<button class="flat" onmousedown="setLocation(this);" value="192.168.43.226:8080">192.168.43.226:8080</button><br/>
@@ -35,6 +36,15 @@
             	<hr>
         	</div>
         	<br/>
+        	<p>Abilita bottoni comandi</p><br/><br/>
+        	<div class="onoffswitch">
+    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    			<label class="onoffswitch-label" for="myonoffswitch">
+        			<span class="onoffswitch-inner"></span>
+        			<span class="onoffswitch-switch"></span>
+    			</label>
+			</div>
+        	
         	
         	<div align="center" id="header">
             	<button class="btn halt" onmousedown="sendWs('halt');">HALT</button><br/>
@@ -61,8 +71,7 @@
         		<div align="center" id="footer">
             		<button class="btn generic" onmousedown="setSpeed(20);">></button>
             		<button class="btn generic" onmousedown="setSpeed(50);">>></button>
-            		<button class="btn generic" onmousedown="setSpeed(100);">>>></button><br/><br/><br/>
-            		<input type="text" id="speed">
+            		<button class="btn generic" onmousedown="setSpeed(100);">>>></button><br/><br/><br/>	
         		</div>
         		</div>
         	</div>
