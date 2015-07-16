@@ -102,14 +102,14 @@ var tog = document.getElementById('myonoffswitch');
 //if(!tog.checked){
 	if(acceleration.z >= 4){
 		if(acceleration.y >=-2 && acceleration.y <=2){
-			msg = 'w-High'
+			msg = "w-High";
 		}else if(acceleration.y > 2){
-			msg = 'a-High';
+			msg = "a-High";
 		}else if(acceleration.y < -2){
-			msg = 'd-High';
+			msg = "d-High";
 		}
 	}else if(acceleration.z <=-4){
-		msg = 's-High';
+		msg = "s-High";
 	}
 	else{
 		msg = 'halt';
