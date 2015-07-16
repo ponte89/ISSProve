@@ -3,6 +3,7 @@ var speedRobot = "Low";
 var sock;
 var msg ;
 
+var stop = false;
 
 function setLocation(el) {
     document.getElementById("location").value = el.value;
@@ -151,5 +152,10 @@ function cont_plus() {
 	//element.innerHTML = ''+msg;
    	//alert( cont ); 
    	
-   	sock.send(msg);
+   	if(!stop)
+   		sock.send(msg);
+}
+
+function stopsendcommand(){
+	stop = true;
 }
