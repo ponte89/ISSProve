@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.it.unibo.RobotConsole.standard"
+        id        = "com.it.unibo.RobotConsole.accelerometer"
         version   = "1.0.0">
 
-    <name>R-Console Standard</name>
+    <name>R-Console Accelerometer</name>
 
     <description>
         A Robot Console for ISS project
