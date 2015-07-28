@@ -99,7 +99,7 @@ function onSuccess(acceleration) {
 
 var tog = document.getElementById('myonoffswitch');
 
-//if(!tog.checked){
+if(!tog.checked){
 	if(acceleration.z >= 4){
 		if(acceleration.y >=-2 && acceleration.y <=2){
 			msg = "w-High";
@@ -114,7 +114,7 @@ var tog = document.getElementById('myonoffswitch');
 	else{
 		msg = 'halt';
 	}
-//}	
+}	
 	
     var element = document.getElementById('accelerometer');
     element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
@@ -135,7 +135,7 @@ var element;
 
 // Usiamo il metodo 2
 function prova(){
-	window.setInterval( 'cont_plus()', 1000 );
+	window.setInterval( 'cont_plus()', 500 );
 }
 
 function cont_plus() { 
